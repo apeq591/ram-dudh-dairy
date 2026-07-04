@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visiting Card — राम दूध डेअरी | Ram Dudh Dairy</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&family=Mukta:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#2E7D32; --green-dk:#1B5E20; --leaf:#4CAF50; --leaf-2:#43A047;
+  --milk:#F7FBF3; --milk-2:#E8F3E2; --ink:#1C2A1A; --muted:#5E7359;
+  --fresh:linear-gradient(135deg,#4CAF50 0%,#2E7D32 52%,#1B5E20 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Mukta',system-ui,sans-serif;background:#dcebd6;color:var(--ink);display:flex;flex-direction:column;align-items:center;min-height:100vh;padding:2.5rem 1rem;gap:1.6rem}
+.mr{font-family:'Tiro Devanagari Marathi','Mukta',serif}
+.serif{font-family:'Fraunces',serif}
+.lead{text-align:center;max-width:520px}
+.lead h1{font-family:'Tiro Devanagari Marathi',serif;color:var(--green-dk);font-size:1.8rem}
+.lead p{color:var(--muted);margin-top:.3rem;font-size:.95rem}
+
+/* business card 85.6 x 54 mm -> screen scaled */
+.cards{display:flex;flex-wrap:wrap;gap:1.6rem;justify-content:center}
+.card{width:428px;height:270px;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(20,70,25,.55);position:relative}
+@media(max-width:480px){.card{width:92vw;height:calc(92vw*0.63)}}
+
+/* FRONT */
+.front{background:var(--fresh);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.4rem}
+.front::before,.front::after{content:"";position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 70%)}
+.front::before{width:220px;height:220px;top:-90px;right:-70px}
+.front::after{width:240px;height:240px;bottom:-130px;left:-70px}
+.front .badge{width:84px;height:84px;background:#fff;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 26px -10px rgba(0,0,0,.4);z-index:2}
+.front .badge img{width:64px;height:64px}
+.front h2{font-family:'Tiro Devanagari Marathi',serif;font-size:2rem;margin-top:.7rem;z-index:2;line-height:1}
+.front .en{font-family:'Fraunces',serif;font-weight:600;letter-spacing:1px;z-index:2;opacity:.95}
+.front .tag{margin-top:.5rem;font-size:.95rem;z-index:2;border-top:1px solid rgba(255,255,255,.4);padding-top:.45rem}
+.front .tag .small{display:block;font-size:.72rem;opacity:.85;letter-spacing:1px}
+
+/* BACK */
+.back{background:var(--milk);padding:1.4rem 1.5rem;display:flex;justify-content:space-between;gap:1rem;border:1px solid rgba(46,125,50,.15)}
+.back .info{display:flex;flex-direction:column;justify-content:space-between}
+.back .who .role{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--leaf-2);font-weight:700}
+.back .who .name{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--ink);line-height:1.1;margin-top:.1rem}
+.back .who .name-mr{font-size:.85rem;color:var(--muted)}
+.back .lines{font-size:.84rem;line-height:1.55;color:var(--ink)}
+.back .lines .l{display:flex;gap:.5rem;align-items:flex-start;margin-top:.25rem}
+.back .lines .l b{color:var(--green-dk);flex:0 0 auto;display:inline-flex;line-height:1}
+.back .lines .l b svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+.back .qr{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;flex:0 0 auto}
+.back .qr img{width:96px;height:96px;border-radius:8px;border:3px solid #fff;box-shadow:0 6px 16px -8px rgba(0,0,0,.4)}
+.back .qr span{font-size:.62rem;letter-spacing:1px;color:var(--muted);text-transform:uppercase;text-align:center}
+.back .brandline{font-family:'Tiro Devanagari Marathi',serif;color:var(--green-dk);font-weight:600;font-size:1rem}
+
+.actions{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;padding:.7rem 1.3rem;border-radius:999px;border:2px solid transparent;cursor:pointer;font-size:.95rem}
+.btn-solid{background:var(--fresh);color:#fff}
+.btn-wa{background:#1faf54;color:#fff}
+.btn-ghost{background:#fff;color:var(--green-dk);border-color:rgba(46,125,50,.25)}
+.hint{font-size:.8rem;color:var(--muted);text-align:center}
+
+@media print{
+  @page{margin:8mm}
+  body{background:#fff;padding:0;display:block}
+  .lead,.actions,.hint{display:none!important}
+  .cards{gap:6mm}
+  .card{box-shadow:none;border:1px solid #ddd;width:85.6mm;height:54mm;border-radius:3mm;page-break-inside:avoid}
+  .front .badge img,.back .qr img{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  .front{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<div class="lead">
+  <h1 class="mr">व्हिजिटिंग कार्ड</h1>
+  <p>राम दूध डेअरीचे व्हिजिटिंग कार्ड — डिजिटल शेअर करा किंवा प्रिंट करा. Share digitally or print (standard 85.6 × 54 mm).</p>
+</div>
+
+<div class="cards">
+
+  <!-- FRONT -->
+  <div class="card front">
+    <div class="badge"><img src="assets/logo.svg" alt="Ram Dudh Dairy"></div>
+    <h2 class="mr">राम दूध डेअरी</h2>
+    <div class="en">RAM DUDH DAIRY</div>
+    <div class="tag mr">शुद्धतेची हमी
+      <span class="small serif">A promise of purity</span>
+    </div>
+  </div>
+
+  <!-- BACK -->
+  <div class="card back">
+    <div class="info">
+      <div class="who">
+        <!-- TODO: replace with the real proprietor's name once confirmed -->
+        <div class="role">Proprietor</div>
+        <div class="name">Ram Dudh Dairy</div>
+        <div class="name-mr mr">राम दूध डेअरी</div>
+      </div>
+      <div class="lines">
+        <div class="l"><b><svg viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"/></svg></b><span>+91 XXXXX XXXXX</span></div>
+        <div class="l"><b><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 3v-3H4z"/></svg></b><span>WhatsApp ऑर्डर उपलब्ध</span></div>
+        <div class="l"><b><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></b><span class="mr">जैन मंदिराजवळ, साई नगर,<br>अमरावती, महाराष्ट्र</span></div>
+        <div class="l"><b><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></b><span>6:30–11:00 · 5:00–9:00</span></div>
+      </div>
+      <div class="brandline mr">दूध · दही · पनीर · तूप · मिठाई</div>
+    </div>
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=1B5E20&data=https://apeq591.github.io/ram-dudh-dairy/" alt="QR to website">
+      <span>Scan for<br>menu &amp; info</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="actions">
+  <a class="btn btn-solid" href="index.html">वेबसाइट</a>
+  <a class="btn btn-wa" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+  <button class="btn btn-ghost" onclick="window.print()">प्रिंट / Print Card</button>
+</div>
+<p class="hint">कार्ड तयार आहे — प्रिंट करा किंवा डिजिटल शेअर करा. Ready to print or share digitally.</p>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>उत्पादने — राम दूध डेअरी | Ram Dudh Dairy Menu</title>
+<meta name="description" content="राम दूध डेअरीची संपूर्ण यादी — दूध, दही, ताक, लस्सी, पनीर, तूप, लोणी, खवा, श्रीखंड, बासुंदी, पेढा व मिठाई. Order fresh dairy on WhatsApp.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&family=Mukta:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#2E7D32; --green-dk:#1B5E20; --leaf:#4CAF50; --leaf-2:#43A047;
+  --milk:#F7FBF3; --milk-2:#E8F3E2; --ink:#1C2A1A; --muted:#5E7359;
+  --gold:#C99A3B;
+  --fresh:linear-gradient(135deg,#4CAF50 0%,#2E7D32 52%,#1B5E20 100%);
+  --shadow:0 18px 50px -22px rgba(20,70,25,.5);
+  --radius:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Mukta',system-ui,sans-serif;color:var(--ink);background:var(--milk);line-height:1.6;-webkit-font-smoothing:antialiased}
+.mr{font-family:'Tiro Devanagari Marathi','Mukta',serif}
+.serif{font-family:'Fraunces',Georgia,serif}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1080px,92vw);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:1rem;padding:.8rem 1.4rem;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease;border:2px solid transparent;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:#1faf54;color:#fff}
+.btn-solid{background:var(--fresh);color:#fff;box-shadow:var(--shadow)}
+.lang-btn{background:transparent;border:1.5px solid var(--green);color:var(--green-dk);border-radius:999px;padding:.4rem .9rem;font:inherit;font-weight:600;font-size:.85rem;cursor:pointer}
+.lang-btn:hover{background:var(--milk-2)}
+
+header{position:sticky;top:0;z-index:50;background:rgba(247,251,243,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(46,125,50,.14)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.6rem 0;gap:.8rem}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand img{width:44px;height:44px}
+.brand b{font-weight:700;font-size:1.1rem}
+.brand span.sub{display:block;font-size:.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:1rem}
+.nav-links a.lnk{font-size:.95rem;opacity:.8}
+.nav-links a.lnk:hover{opacity:1;color:var(--green-dk)}
+.nav .btn{padding:.5rem 1rem;font-size:.88rem}
+
+/* page head */
+.phead{background:var(--fresh);color:#fff;text-align:center;padding:3rem 0 2.4rem;position:relative;overflow:hidden}
+.phead::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);top:-200px;right:-120px}
+.phead .inner{position:relative;z-index:2}
+.phead h1{font-family:'Tiro Devanagari Marathi',serif;font-size:clamp(2rem,6vw,3.1rem);line-height:1.05}
+body.lang-en .phead h1{font-family:'Fraunces',serif}
+.phead p{opacity:.95;margin-top:.5rem;max-width:560px;margin-inline:auto}
+.phead .backlink{display:inline-block;margin-top:1rem;font-size:.9rem;opacity:.9;border:1.5px solid rgba(255,255,255,.6);border-radius:999px;padding:.4rem 1rem}
+
+/* sticky chips */
+.chips-bar{position:sticky;top:57px;z-index:40;background:rgba(247,251,243,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(46,125,50,.12);padding:.7rem 0}
+.chips{display:flex;gap:.55rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font-size:.9rem;font-weight:600;padding:.45rem 1rem;border-radius:999px;background:#fff;border:1.5px solid rgba(46,125,50,.25);color:var(--green-dk);white-space:nowrap;cursor:pointer}
+.chip:hover{background:var(--milk-2)}
+
+/* catalogue */
+.cat-sec{padding:2.6rem 0 1rem;scroll-margin-top:120px}
+.cat-head{display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem}
+.cat-head .ic{width:52px;height:52px;flex:0 0 auto;border-radius:50%;background:var(--milk-2);display:grid;place-items:center}
+.cat-head .ic svg{width:28px;height:28px;stroke:var(--green-dk);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cat-head h2{font-family:'Tiro Devanagari Marathi',serif;color:var(--green-dk);font-size:1.7rem;line-height:1}
+.cat-head .en{font-size:.82rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+body.lang-en .cat-head h2{font-family:'Fraunces',serif}
+
+.items{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
+@media(max-width:640px){.items{grid-template-columns:1fr}}
+.item{display:flex;align-items:center;justify-content:space-between;gap:.8rem;background:#fff;border:1px solid rgba(46,125,50,.1);border-radius:14px;padding:.95rem 1.1rem;transition:box-shadow .2s,border-color .2s}
+.item:hover{box-shadow:var(--shadow);border-color:rgba(76,175,80,.35)}
+.item .nm{font-family:'Tiro Devanagari Marathi',serif;font-size:1.15rem;color:var(--ink);line-height:1.2}
+body.lang-en .item .nm{font-family:'Mukta',sans-serif;font-weight:600}
+.item .sub{font-size:.8rem;color:var(--muted)}
+.add{flex:0 0 auto;display:inline-flex;align-items:center;gap:.3rem;background:var(--milk-2);color:var(--green-dk);border:1.5px solid rgba(76,175,80,.4);border-radius:999px;padding:.45rem .9rem;font:inherit;font-weight:600;font-size:.88rem;cursor:pointer;transition:background .18s,transform .18s}
+.add:hover{background:var(--leaf);color:#fff;transform:translateY(-2px)}
+.add svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+
+.price-note{max-width:760px;margin:1.4rem auto 0;text-align:center;background:var(--milk-2);border:1px solid rgba(76,175,80,.3);border-radius:14px;padding:.9rem 1.2rem;color:var(--ink);font-size:.95rem}
+.price-note .em{color:var(--green-dk);font-weight:600}
+
+.order-cta{text-align:center;padding:3rem 0 3.5rem}
+.order-cta h3{font-family:'Tiro Devanagari Marathi',serif;font-size:1.6rem;color:var(--green-dk);margin-bottom:.8rem}
+body.lang-en .order-cta h3{font-family:'Fraunces',serif}
+.order-cta .row{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}
+
+footer{background:#0f1c12;color:rgba(255,255,255,.7);padding:2.4rem 0;text-align:center;font-size:.9rem}
+footer .fbrand{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:.6rem;color:#fff}
+footer .fbrand img{width:36px;height:36px}
+footer a{color:#8BD98F}
+footer .fine{margin-top:.7rem;font-size:.78rem;opacity:.5}
+footer .credit{margin-top:1rem;font-size:1rem;color:rgba(255,255,255,.8)}
+footer .credit a{color:#7FB2FF;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px}
+footer .credit a::after{content:" ↗";text-decoration:none}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="Ram Dudh Dairy logo">
+      <span style="line-height:1.1">
+        <b class="mr" data-mr="राम दूध डेअरी" data-en="Ram Dudh Dairy">राम दूध डेअरी</b>
+        <span class="sub">Ram Dudh Dairy</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <button class="lang-btn" onclick="rdToggleLang()">English</button>
+      <a class="btn btn-wa" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </nav>
+</header>
+
+<section class="phead">
+  <div class="wrap inner">
+    <h1 class="mr" data-mr="आमची संपूर्ण यादी" data-en="Our Full Menu">आमची संपूर्ण यादी</h1>
+    <p data-mr="ताज्या दुधापासून बनवलेले सर्व पदार्थ. आवडेल ते बास्केटमध्ये टाका आणि WhatsApp वर ऑर्डर पाठवा." data-en="Everything made from fresh milk. Add what you like to the basket and send your order on WhatsApp.">ताज्या दुधापासून बनवलेले सर्व पदार्थ. आवडेल ते बास्केटमध्ये टाका आणि WhatsApp वर ऑर्डर पाठवा.</p>
+    <a class="backlink" href="index.html" data-mr="← मुख्यपृष्ठ" data-en="← Home">← मुख्यपृष्ठ</a>
+  </div>
+</section>
+
+<div class="chips-bar">
+  <div class="wrap chips">
+    <a class="chip" href="#milk" data-mr="ताजं दूध" data-en="Fresh Milk">ताजं दूध</a>
+    <a class="chip" href="#dahi" data-mr="दही" data-en="Curd">दही</a>
+    <a class="chip" href="#taak" data-mr="ताक व लस्सी" data-en="Buttermilk & Lassi">ताक व लस्सी</a>
+    <a class="chip" href="#paneer" data-mr="पनीर" data-en="Paneer">पनीर</a>
+    <a class="chip" href="#ghee" data-mr="तूप व लोणी" data-en="Ghee & Butter">तूप व लोणी</a>
+    <a class="chip" href="#khava" data-mr="खवा / मावा" data-en="Khava / Mawa">खवा / मावा</a>
+    <a class="chip" href="#shrikhand" data-mr="श्रीखंड व बासुंदी" data-en="Shrikhand & Basundi">श्रीखंड व बासुंदी</a>
+    <a class="chip" href="#pedha" data-mr="पेढा व मिठाई" data-en="Pedha & Sweets">पेढा व मिठाई</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- MILK -->
+  <section class="cat-sec" id="milk">
+    <div class="cat-head">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 2h6M8 6h8l-1 3v11a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1V9z"/><path d="M8.4 6l.6-4M15.6 6l-.6-4M9 13h6"/></svg></div>
+      <div><h2 class="mr" data-mr="ताजं दूध" data-en="Fresh Milk">ताजं दूध</h2><div class="en">Fresh Milk</div></div>
+    </div>
+    <div class="items">
+      <div class="item"><div><div class="nm mr" data-mr="गाईचं दूध" data-en="Cow Milk">गाईचं दूध</div><div class="sub" data-mr="प्रति लिटर · रोज ताजं" data-en="Per litre · fresh daily">प्रति लिटर · रोज ताजं</div></div><button class="add" data-key="cow-milk" data-name-mr="गाईचं दूध" data-name-en="Cow Milk"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="म्हशीचं दूध" data-en="Buffalo Milk">म्हशीचं दूध</div><div class="sub" data-mr="प्रति लिटर · घट्ट व मलईदार" data-en="Per litre · rich & creamy">प्रति लिटर · घट्ट व मलईदार</div></div><button class="add" data-key="buffalo-milk" data-name-mr="म्हशीचं दूध" data-name-en="Buffalo Milk"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="फुल क्रीम दूध" data-en="Full-Cream Milk">फुल क्रीम दूध</div><div class="sub" data-mr="प्रति लिटर" data-en="Per litre">प्रति लिटर</div></div><button class="add" data-key="full-cream-milk" data-name-mr="फुल क्रीम दूध" data-name-en="Full-Cream Milk"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="टोन्ड दूध" data-en="Toned Milk">टोन्ड दूध</div><div class="sub" data-mr="प्रति लिटर · हलकं" data-en="Per litre · lighter">प्रति लिटर · हलकं</div></div><button class="add" data-key="toned-milk" data-name-mr="टोन्ड दूध" data-name-en="Toned Milk"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+    </div>
+  </section>
+
+  <!-- DAHI -->
+  <section class="cat-sec" id="dahi">
+    <div class="cat-head">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9h16l-1.2 9.5a2 2 0 0 1-2 1.5H7.2a2 2 0 0 1-2-1.5z"/><path d="M4 9c0-2 3.6-3.5 8-3.5S20 7 20 9"/><path d="M9 13.5l1.6 1.6L14 12"/></svg></div>
+      <div><h2 class="mr" data-mr="दही" data-en="Curd (Dahi)">दही</h2><div class="en">Curd (Dahi)</div></div>
+    </div>
+    <div class="items">
+      <div class="item"><div><div class="nm mr" data-mr="घरगुती दही" data-en="Homemade Curd">घरगुती दही</div><div class="sub" data-mr="ताजं व घट्ट" data-en="Fresh & thick">ताजं व घट्ट</div></div><button class="add" data-key="home-curd" data-name-mr="घरगुती दही" data-name-en="Homemade Curd"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="गाईच्या दुधाचं दही" data-en="Cow-milk Curd">गाईच्या दुधाचं दही</div><div class="sub" data-mr="हलकं व आंबट-गोड" data-en="Light & mild">हलकं व आंबट-गोड</div></div><button class="add" data-key="cow-curd" data-name-mr="गाईच्या दुधाचं दही" data-name-en="Cow-milk Curd"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="मलई दही (सेट)" data-en="Set Malai Curd">मलई दही (सेट)</div><div class="sub" data-mr="घट्ट सेट दही" data-en="Thick set curd">घट्ट सेट दही</div></div><button class="add" data-key="malai-curd" data-name-mr="मलई दही (सेट)" data-name-en="Set Malai Curd"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+    </div>
+  </section>
+
+  <!-- TAAK -->
+  <section class="cat-sec" id="taak">
+    <div class="cat-head">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M7 8h10l-1 12a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z"/><path d="M7 8l1.5-3h7L17 8"/><path d="M13 2c1 1 1 2 0 3"/></svg></div>
+      <div><h2 class="mr" data-mr="ताक व लस्सी" data-en="Buttermilk & Lassi">ताक व लस्सी</h2><div class="en">Buttermilk & Lassi</div></div>
+    </div>
+    <div class="items">
+      <div class="item"><div><div class="nm mr" data-mr="ताजं ताक" data-en="Fresh Buttermilk">ताजं ताक</div><div class="sub" data-mr="साधं ताक" data-en="Plain buttermilk">साधं ताक</div></div><button class="add" data-key="buttermilk" data-name-mr="ताजं ताक" data-name-en="Fresh Buttermilk"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="मसाला ताक" data-en="Masala Buttermilk">मसाला ताक</div><div class="sub" data-mr="जिरे-कोथिंबीर" data-en="Cumin & coriander">जिरे-कोथिंबीर</div></div><button class="add" data-key="masala-taak" data-name-mr="मसाला ताक" data-name-en="Masala Buttermilk"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="गोड लस्सी" data-en="Sweet Lassi">गोड लस्सी</div><div class="sub" data-mr="घट्ट व मलईदार" data-en="Thick & creamy">घट्ट व मलईदार</div></div><button class="add" data-key="sweet-lassi" data-name-mr="गोड लस्सी" data-name-en="Sweet Lassi"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="मठ्ठा" data-en="Mattha">मठ्ठा</div><div class="sub" data-mr="मसालेदार" data-en="Spiced">मसालेदार</div></div><button class="add" data-key="mattha" data-name-mr="मठ्ठा" data-name-en="Mattha"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+    </div>
+  </section>
+
+  <!-- PANEER -->
+  <section class="cat-sec" id="paneer">
+    <div class="cat-head">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9l8-4 8 4-8 4z"/><path d="M4 9v6l8 4 8-4V9"/><path d="M12 13v6"/></svg></div>
+      <div><h2 class="mr" data-mr="पनीर" data-en="Paneer">पनीर</h2><div class="en">Paneer</div></div>
+    </div>
+    <div class="items">
+      <div class="item"><div><div class="nm mr" data-mr="ताजं पनीर" data-en="Fresh Paneer">ताजं पनीर</div><div class="sub" data-mr="प्रति किलो · रोज ताजं" data-en="Per kg · fresh daily">प्रति किलो · रोज ताजं</div></div><button class="add" data-key="paneer" data-name-mr="ताजं पनीर" data-name-en="Fresh Paneer"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="मलई पनीर" data-en="Malai Paneer">मलई पनीर</div><div class="sub" data-mr="मऊ व मलईदार" data-en="Soft & creamy">मऊ व मलईदार</div></div><button class="add" data-key="malai-paneer" data-name-mr="मलई पनीर" data-name-en="Malai Paneer"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+    </div>
+  </section>
+
+  <!-- GHEE -->
+  <section class="cat-sec" id="ghee">
+    <div class="cat-head">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M8 8h8v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2z"/><path d="M9 8V5h6v3"/><path d="M10.5 4h3"/><path d="M11 13h2"/></svg></div>
+      <div><h2 class="mr" data-mr="तूप व लोणी" data-en="Ghee & Butter">तूप व लोणी</h2><div class="en">Ghee & Butter</div></div>
+    </div>
+    <div class="items">
+      <div class="item"><div><div class="nm mr" data-mr="गाईचं साजूक तूप" data-en="Cow Ghee">गाईचं साजूक तूप</div><div class="sub" data-mr="शुद्ध व सुगंधी" data-en="Pure & aromatic">शुद्ध व सुगंधी</div></div><button class="add" data-key="cow-ghee" data-name-mr="गाईचं साजूक तूप" data-name-en="Cow Ghee"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="म्हशीचं तूप" data-en="Buffalo Ghee">म्हशीचं तूप</div><div class="sub" data-mr="घट्ट व दाणेदार" data-en="Rich & grainy">घट्ट व दाणेदार</div></div><button class="add" data-key="buffalo-ghee" data-name-mr="म्हशीचं तूप" data-name-en="Buffalo Ghee"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="ताजं लोणी" data-en="Fresh White Butter">ताजं लोणी</div><div class="sub" data-mr="घरगुती पांढरं लोणी" data-en="Homemade loni">घरगुती पांढरं लोणी</div></div><button class="add" data-key="loni" data-name-mr="ताजं लोणी" data-name-en="Fresh White Butter"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+    </div>
+  </section>
+
+  <!-- KHAVA -->
+  <section class="cat-sec" id="khava">
+    <div class="cat-head">
+      <div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="13" r="4"/><circle cx="16" cy="11" r="3.5"/><path d="M5 17h14"/></svg></div>
+      <div><h2 class="mr" data-mr="खवा / मावा" data-en="Khava / Mawa">खवा / मावा</h2><div class="en">Khava / Mawa</div></div>
+    </div>
+    <div class="items">
+      <div class="item"><div><div class="nm mr" data-mr="ताजा खवा" data-en="Fresh Khava">ताजा खवा</div><div class="sub" data-mr="मिठाईसाठी उत्तम" data-en="Great for sweets">मिठाईसाठी उत्तम</div></div><button class="add" data-key="khava" data-name-mr="ताजा खवा" data-name-en="Fresh Khava"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="दाणेदार खवा" data-en="Granular Khava">दाणेदार खवा</div><div class="sub" data-mr="पेढ्यासाठी" data-en="For pedha">पेढ्यासाठी</div></div><button class="add" data-key="granular-khava" data-name-mr="दाणेदार खवा" data-name-en="Granular Khava"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+    </div>
+  </section>
+
+  <!-- SHRIKHAND -->
+  <section class="cat-sec" id="shrikhand">
+    <div class="cat-head">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M8 8c0-1.2 1-1.6 1-2.8M12 8c0-1.2 1-1.6 1-2.8M16 8c0-1.2 1-1.6 1-2.8"/></svg></div>
+      <div><h2 class="mr" data-mr="श्रीखंड व बासुंदी" data-en="Shrikhand & Basundi">श्रीखंड व बासुंदी</h2><div class="en">Shrikhand & Basundi</div></div>
+    </div>
+    <div class="items">
+      <div class="item"><div><div class="nm mr" data-mr="केशर श्रीखंड" data-en="Kesar Shrikhand">केशर श्रीखंड</div><div class="sub" data-mr="केशर-वेलची" data-en="Saffron & cardamom">केशर-वेलची</div></div><button class="add" data-key="kesar-shrikhand" data-name-mr="केशर श्रीखंड" data-name-en="Kesar Shrikhand"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="आम्रखंड" data-en="Amrakhand">आम्रखंड</div><div class="sub" data-mr="आंबा श्रीखंड (हंगामी)" data-en="Mango shrikhand (seasonal)">आंबा श्रीखंड (हंगामी)</div></div><button class="add" data-key="amrakhand" data-name-mr="आम्रखंड" data-name-en="Amrakhand"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="बासुंदी" data-en="Basundi">बासुंदी</div><div class="sub" data-mr="घट्ट आटवलेलं दूध" data-en="Thickened milk sweet">घट्ट आटवलेलं दूध</div></div><button class="add" data-key="basundi" data-name-mr="बासुंदी" data-name-en="Basundi"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+    </div>
+  </section>
+
+  <!-- PEDHA -->
+  <section class="cat-sec" id="pedha">
+    <div class="cat-head">
+      <div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="10" r="3"/><circle cx="15" cy="9" r="3"/><circle cx="12" cy="15" r="3"/></svg></div>
+      <div><h2 class="mr" data-mr="पेढा व मिठाई" data-en="Pedha & Sweets">पेढा व मिठाई</h2><div class="en">Pedha & Sweets</div></div>
+    </div>
+    <div class="items">
+      <div class="item"><div><div class="nm mr" data-mr="दुधाचा पेढा" data-en="Milk Pedha">दुधाचा पेढा</div><div class="sub" data-mr="ताजा खव्याचा" data-en="From fresh khava">ताजा खव्याचा</div></div><button class="add" data-key="milk-pedha" data-name-mr="दुधाचा पेढा" data-name-en="Milk Pedha"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="केशर पेढा" data-en="Kesar Pedha">केशर पेढा</div><div class="sub" data-mr="केशर-वेलची" data-en="Saffron & cardamom">केशर-वेलची</div></div><button class="add" data-key="kesar-pedha" data-name-mr="केशर पेढा" data-name-en="Kesar Pedha"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="मिल्क बर्फी" data-en="Milk Barfi">मिल्क बर्फी</div><div class="sub" data-mr="मऊ बर्फी" data-en="Soft barfi">मऊ बर्फी</div></div><button class="add" data-key="milk-barfi" data-name-mr="मिल्क बर्फी" data-name-en="Milk Barfi"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+      <div class="item"><div><div class="nm mr" data-mr="गुलाबजाम" data-en="Gulab Jamun">गुलाबजाम</div><div class="sub" data-mr="खव्याचे गुलाबजाम" data-en="Khava gulab jamun">खव्याचे गुलाबजाम</div></div><button class="add" data-key="gulab-jamun" data-name-mr="गुलाबजाम" data-name-en="Gulab Jamun"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-mr="टाका" data-en="Add">टाका</span></button></div>
+    </div>
+  </section>
+
+  <p class="price-note" data-mr="किंमती व उपलब्धता <span class='em'>WhatsApp वर विचारा</span> — हंगाम व दिवसानुसार बदलू शकतात. सण-समारंभासाठी आगाऊ ऑर्डर घेतल्या जातात." data-en="<span class='em'>Ask prices & availability on WhatsApp</span> — they vary by season and day. Advance orders taken for festivals & functions.">किंमती व उपलब्धता <span class="em">WhatsApp वर विचारा</span> — हंगाम व दिवसानुसार बदलू शकतात. सण-समारंभासाठी आगाऊ ऑर्डर घेतल्या जातात.</p>
+
+  <div class="order-cta">
+    <h3 class="mr" data-mr="बास्केट तयार आहे?" data-en="Basket ready?">बास्केट तयार आहे?</h3>
+    <div class="row">
+      <button class="btn btn-solid" onclick="rdOpenCart()" data-mr="बास्केट पाहा →" data-en="View basket →">बास्केट पाहा →</button>
+      <a class="btn btn-wa" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" data-mr="थेट WhatsApp करा" data-en="Message us on WhatsApp">थेट WhatsApp करा</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">
+      <img src="assets/logo.svg" alt="">
+      <b class="mr" data-mr="राम दूध डेअरी · Ram Dudh Dairy" data-en="Ram Dudh Dairy · राम दूध डेअरी">राम दूध डेअरी · Ram Dudh Dairy</b>
+    </div>
+    <p data-mr="जैन मंदिराजवळ, साई नगर, अमरावती, महाराष्ट्र" data-en="Near Jain Mandir, Sai Nagar, Amravati, Maharashtra">जैन मंदिराजवळ, साई नगर, अमरावती, महाराष्ट्र</p>
+    <p>+91 XXXXX XXXXX</p>
+    <p class="fine">© Ram Dudh Dairy. शुद्धतेची हमी.</p>
+    <p class="credit">Designed by <a href="https://apeq591.github.io/mukta-card/" target="_blank" rel="noopener">Mukta Dhandge</a></p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
