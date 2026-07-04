@@ -1,31 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Ram Dudh Dairy logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Ram Dudh Dairy — cow emblem">
   <defs>
-    <linearGradient id="rdFresh" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#4CAF50"/>
-      <stop offset="0.55" stop-color="#2E7D32"/>
-      <stop offset="1" stop-color="#1B5E20"/>
+    <linearGradient id="rdButter" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBD26B"/>
+      <stop offset="1" stop-color="#E8A317"/>
     </linearGradient>
-    <radialGradient id="rdGlow" cx="0.5" cy="0.42" r="0.7">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#EAF4E4"/>
-    </radialGradient>
+    <linearGradient id="rdGreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E8A5A"/>
+      <stop offset="1" stop-color="#0E5637"/>
+    </linearGradient>
   </defs>
 
-  <!-- outer badge ring -->
-  <circle cx="100" cy="100" r="94" fill="url(#rdFresh)"/>
-  <circle cx="100" cy="100" r="80" fill="url(#rdGlow)"/>
-  <circle cx="100" cy="100" r="80" fill="none" stroke="#1B5E20" stroke-width="1.5" opacity="0.3"/>
+  <!-- badge -->
+  <circle cx="100" cy="100" r="96" fill="url(#rdButter)"/>
+  <circle cx="100" cy="100" r="84" fill="#FFF7E6"/>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#0E5637" stroke-width="2" opacity="0.9"/>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#0E5637" stroke-width="1" opacity="0.25"/>
 
-  <!-- milk drop -->
-  <path d="M100 108 C100 130 116 138 116 150 a16 16 0 0 1 -32 0 C84 138 100 130 100 108 Z" fill="#2E7D32" opacity="0.92"/>
-  <path d="M100 108 C100 130 116 138 116 150 a16 16 0 0 1 -32 0 C84 138 100 130 100 108 Z" fill="none" stroke="#1B5E20" stroke-width="1.5" opacity="0.4"/>
-  <!-- drop highlight -->
-  <path d="M94 138 a5 8 0 0 1 4 -9" fill="none" stroke="#EAF4E4" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+  <!-- horns -->
+  <path d="M74 66 C64 58 60 48 64 40 C72 44 78 54 80 66 Z" fill="#FFF7E6" stroke="#0E5637" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M126 66 C136 58 140 48 136 40 C128 44 122 54 120 66 Z" fill="#FFF7E6" stroke="#0E5637" stroke-width="2.4" stroke-linejoin="round"/>
 
-  <!-- two fresh leaves flanking the drop -->
-  <path d="M84 118 C74 116 68 108 68 100 C78 101 84 108 84 118 Z" fill="#4CAF50" opacity="0.85"/>
-  <path d="M116 118 C126 116 132 108 132 100 C122 101 116 108 116 118 Z" fill="#4CAF50" opacity="0.85"/>
+  <!-- ears -->
+  <ellipse cx="58" cy="99" rx="17" ry="10.5" fill="url(#rdGreen)" transform="rotate(-24 58 99)"/>
+  <ellipse cx="142" cy="99" rx="17" ry="10.5" fill="url(#rdGreen)" transform="rotate(24 142 99)"/>
 
-  <!-- devanagari mark -->
-  <text x="100" y="88" text-anchor="middle" font-family="'Tiro Devanagari Marathi','Mukta',serif" font-size="52" font-weight="700" fill="#1B5E20">राम</text>
+  <!-- head -->
+  <ellipse cx="100" cy="102" rx="43" ry="41" fill="url(#rdGreen)"/>
+  <ellipse cx="100" cy="83" rx="33" ry="27" fill="url(#rdGreen)"/>
+
+  <!-- forelock tuft -->
+  <path d="M100 60 C94 68 92 74 100 78 C108 74 106 68 100 60 Z" fill="#FBD26B"/>
+
+  <!-- muzzle -->
+  <ellipse cx="100" cy="124" rx="27" ry="20.5" fill="#FFF3DC"/>
+  <ellipse cx="100" cy="124" rx="27" ry="20.5" fill="none" stroke="#0E5637" stroke-width="1.6" opacity="0.35"/>
+  <!-- nostrils -->
+  <ellipse cx="90" cy="125" rx="3.6" ry="2.6" fill="#0E5637"/>
+  <ellipse cx="110" cy="125" rx="3.6" ry="2.6" fill="#0E5637"/>
+
+  <!-- eyes -->
+  <circle cx="83" cy="99" r="6.4" fill="#21302A"/>
+  <circle cx="117" cy="99" r="6.4" fill="#21302A"/>
+  <circle cx="85" cy="96.6" r="2" fill="#FFF7E6"/>
+  <circle cx="119" cy="96.6" r="2" fill="#FFF7E6"/>
+
+  <!-- milk drop charm below chin -->
+  <path d="M100 146 C100 155 106 158 106 163 a6 6 0 0 1 -12 0 C94 158 100 155 100 146 Z" fill="#FFF7E6" stroke="#0E5637" stroke-width="2"/>
 </svg>

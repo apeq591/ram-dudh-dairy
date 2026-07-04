@@ -4,159 +4,202 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>राम दूध डेअरी — Ram Dudh Dairy | Sai Nagar, Amravati</title>
-<meta name="description" content="राम दूध डेअरी — साई नगर, अमरावती येथील शुद्ध व ताज्या दुधाची डेअरी. दूध, दही, ताक, पनीर, तूप, खवा, श्रीखंड व पेढा. Pure, fresh dairy — a promise of purity.">
+<meta name="description" content="राम दूध डेअरी — साई नगर, अमरावती येथील घरगुती दूध डेअरी. रोज सकाळी ताजं व शुद्ध दूध, दही, ताक, पनीर, तूप, खवा, श्रीखंड व पेढा. मालक: राम बुरघाटे. Fresh from the farm, every morning.">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&family=Mukta:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --green:#2E7D32; --green-dk:#1B5E20; --leaf:#4CAF50; --leaf-2:#43A047;
-  --milk:#F7FBF3; --milk-2:#E8F3E2; --ink:#1C2A1A; --muted:#5E7359;
-  --gold:#C99A3B;
-  --fresh:linear-gradient(135deg,#4CAF50 0%,#2E7D32 52%,#1B5E20 100%);
-  --shadow:0 18px 50px -22px rgba(20,70,25,.5);
-  --radius:22px;
+  --milk:#FBF8F0; --milk-soft:#FFFDF8; --white:#fff;
+  --green:#16794C; --green-dk:#0E5637; --green-deep:#0B3D28; --green-bright:#1E8A5A;
+  --butter:#F6B93B; --butter-dk:#E8A317;
+  --mint:#E7F4EC; --cream:#FFF3DC; --sky:#E9F1FB; --blush:#FCEDE3;
+  --ink:#21302A; --muted:#6B7A70;
+  --shadow-sm:0 8px 24px -14px rgba(14,60,40,.4);
+  --shadow:0 26px 60px -28px rgba(14,60,40,.5);
+  --r:26px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Mukta',system-ui,sans-serif;color:var(--ink);background:var(--milk);line-height:1.6;-webkit-font-smoothing:antialiased}
-.mr{font-family:'Tiro Devanagari Marathi','Mukta',serif}
-.serif{font-family:'Fraunces',Georgia,serif}
+body{font-family:'Mukta',system-ui,sans-serif;color:var(--ink);background:var(--milk);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.disp{font-family:'Baloo 2','Mukta',cursive;font-weight:700;line-height:1.12}
 a{color:inherit;text-decoration:none}
-.wrap{width:min(1140px,92vw);margin-inline:auto}
-.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:1rem;padding:.85rem 1.5rem;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease;border:2px solid transparent;cursor:pointer}
+.wrap{width:min(1160px,92vw);margin-inline:auto}
+img{max-width:100%}
+
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-family:'Baloo 2',cursive;font-weight:600;font-size:1rem;padding:.85rem 1.6rem;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease,background .18s;border:none;cursor:pointer}
 .btn:hover{transform:translateY(-2px)}
-.btn-primary{background:#fff;color:var(--green-dk);box-shadow:0 10px 30px -10px rgba(0,0,0,.4)}
+.btn-butter{background:var(--butter);color:var(--green-deep);box-shadow:0 14px 30px -12px rgba(232,163,23,.7)}
+.btn-butter:hover{background:var(--butter-dk)}
+.btn-green{background:var(--green-dk);color:#fff;box-shadow:var(--shadow-sm)}
+.btn-green:hover{background:var(--green-deep)}
 .btn-wa{background:#1faf54;color:#fff}
-.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
-.btn-solid{background:var(--fresh);color:#fff;box-shadow:var(--shadow)}
+.btn-line{background:transparent;color:var(--green-dk);box-shadow:inset 0 0 0 2px rgba(14,86,55,.25)}
+.btn-white{background:#fff;color:var(--green-dk);box-shadow:var(--shadow-sm)}
 
-.lang-btn{background:transparent;border:1.5px solid var(--green);color:var(--green-dk);border-radius:999px;padding:.4rem .9rem;font:inherit;font-weight:600;font-size:.85rem;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem}
-.lang-btn:hover{background:var(--milk-2)}
+.lang-btn{background:#fff;border:2px solid rgba(14,86,55,.18);color:var(--green-dk);border-radius:999px;padding:.4rem .85rem;font-family:'Baloo 2',cursive;font-weight:600;font-size:.82rem;cursor:pointer;letter-spacing:.5px}
+.lang-btn:hover{border-color:var(--butter);background:var(--cream)}
 
-/* ---- top bar ---- */
-header{position:sticky;top:0;z-index:50;background:rgba(247,251,243,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(46,125,50,.14)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:.6rem 0;gap:.8rem}
-.brand{display:flex;align-items:center;gap:.7rem}
-.brand img{width:46px;height:46px}
-.brand b{font-weight:700;font-size:1.15rem;letter-spacing:.2px}
-.brand span.sub{display:block;font-size:.72rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
-.nav-links{display:flex;align-items:center;gap:1.3rem;font-weight:500}
-.nav-links a.lnk{font-size:.95rem;color:var(--ink);opacity:.8}
-.nav-links a.lnk:hover{opacity:1;color:var(--green-dk)}
-.nav .btn{padding:.55rem 1.1rem;font-size:.9rem}
-@media(max-width:860px){.nav-links a.lnk{display:none}}
+/* ---------- nav ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(251,248,240,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(14,86,55,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.55rem 0;gap:.8rem}
+.brand{display:flex;align-items:center;gap:.65rem}
+.brand img{width:50px;height:50px}
+.brand b{font-family:'Baloo 2',cursive;font-weight:700;font-size:1.2rem;color:var(--green-dk);line-height:1}
+.brand small{display:block;font-size:.66rem;color:var(--muted);letter-spacing:2.5px;text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:1.3rem}
+.nav-links a.lnk{font-weight:600;font-size:.95rem;color:var(--ink);opacity:.78}
+.nav-links a.lnk:hover{opacity:1;color:var(--green)}
+.nav .btn{padding:.55rem 1.15rem;font-size:.9rem}
+@media(max-width:880px){.nav-links a.lnk{display:none}}
 
-/* ---- hero ---- */
-.hero{position:relative;overflow:hidden;background:var(--fresh);color:#fff;padding:4.5rem 0 5.5rem;text-align:center}
-.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%)}
-.hero::before{width:460px;height:460px;top:-160px;right:-120px}
-.hero::after{width:520px;height:520px;bottom:-260px;left:-160px}
-.hero .inner{position:relative;z-index:2}
-.hero .badge{width:108px;height:108px;margin:0 auto 1.2rem;background:#fff;border-radius:50%;display:grid;place-items:center;box-shadow:0 16px 40px -14px rgba(0,0,0,.4)}
-.hero .badge img{width:84px;height:84px}
-.kicker{letter-spacing:5px;text-transform:uppercase;font-size:.78rem;opacity:.92;font-weight:600}
-.hero h1{font-size:clamp(2.8rem,8vw,4.8rem);line-height:1.02;margin:.5rem 0 .2rem;text-shadow:0 4px 24px rgba(10,50,15,.35)}
-.hero .en{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.1rem,3vw,1.5rem);opacity:.95;letter-spacing:1px}
-.tagline{font-size:clamp(1.2rem,3.4vw,1.7rem);margin-top:1rem;font-weight:500}
-.tagline .small{display:block;font-size:.95rem;opacity:.85;letter-spacing:1px;margin-top:.15rem}
-.hero-cta{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:1.8rem}
-.estd{margin-top:1.6rem;font-size:.82rem;letter-spacing:3px;opacity:.85;text-transform:uppercase}
+/* ---------- hero ---------- */
+.hero{position:relative;padding:3.2rem 0 5.5rem}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:2rem;text-align:center}}
+.chip{display:inline-flex;align-items:center;gap:.5rem;background:var(--mint);color:var(--green-dk);font-weight:600;font-size:.85rem;padding:.4rem .9rem;border-radius:999px;box-shadow:var(--shadow-sm)}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--butter)}
+.hero h1{font-size:clamp(2.6rem,6.2vw,4.4rem);color:var(--green-deep);margin:1.1rem 0 .4rem}
+.hero h1 .hl{position:relative;color:var(--green);white-space:nowrap}
+.hero h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.28em;background:var(--butter);opacity:.45;border-radius:6px;z-index:-1}
+.hero .lead{font-size:1.15rem;color:var(--muted);max-width:33ch;margin-bottom:1.6rem}
+@media(max-width:900px){.hero .lead{margin-inline:auto}}
+.hero-cta{display:flex;gap:.8rem;flex-wrap:wrap}
+@media(max-width:900px){.hero-cta{justify-content:center}}
+.trust{display:flex;align-items:center;gap:.9rem;margin-top:1.8rem}
+@media(max-width:900px){.trust{justify-content:center}}
+.stars{display:inline-flex;gap:2px}
+.stars svg{width:18px;height:18px;fill:var(--butter)}
+.trust .txt{font-size:.9rem;color:var(--muted)}
+.trust .txt b{color:var(--green-dk);font-family:'Baloo 2',cursive}
 
-/* ---- trust pillars ---- */
-.pillars{margin-top:-2.6rem;position:relative;z-index:5}
-.pillars .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.pill{background:#fff;border-radius:var(--radius);padding:1.5rem 1.2rem;text-align:center;box-shadow:var(--shadow)}
-.pill .ic{width:58px;height:58px;margin:0 auto .3rem;border-radius:50%;background:var(--milk-2);display:grid;place-items:center}
-.pill .ic svg,.cat .ic svg,.step .ic svg{width:28px;height:28px;stroke:var(--green-dk);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.pill h3{font-family:'Tiro Devanagari Marathi',serif;color:var(--green-dk);font-size:1.35rem;margin:.3rem 0 .1rem}
-.pill p{font-size:.9rem;color:var(--muted)}
-body.lang-en .pill h3{font-family:'Fraunces',serif}
-@media(max-width:680px){.pillars .grid{grid-template-columns:1fr;gap:.8rem}.pillars{margin-top:-1.8rem}}
+/* hero art */
+.hero-art{position:relative;display:grid;place-items:center;min-height:380px}
+.art-disc{position:relative;width:min(420px,86vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 42%,#FFFFFF 0,#EAF4EC 62%,#DCEFE1 100%);box-shadow:var(--shadow),inset 0 0 0 12px rgba(255,255,255,.6)}
+.art-disc::before{content:"";position:absolute;inset:-3%;border-radius:50%;border:2px dashed rgba(22,121,76,.25)}
+.art-emblem{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56%}
+.float{position:absolute;background:#fff;border-radius:20px;box-shadow:var(--shadow);display:flex;align-items:center;gap:.5rem;padding:.7rem .95rem;font-family:'Baloo 2',cursive;font-weight:600;font-size:.9rem;color:var(--green-dk);animation:bob 4s ease-in-out infinite}
+.float svg{width:26px;height:26px}
+.float.f1{top:6%;left:-6%;animation-delay:0s}
+.float.f2{bottom:12%;left:-9%;animation-delay:.8s}
+.float.f3{top:14%;right:-8%;animation-delay:1.5s}
+.float.f4{bottom:4%;right:-4%;background:var(--butter);color:var(--green-deep);animation-delay:1.1s}
+@media(max-width:520px){.float.f1{left:0}.float.f2{left:-2%}.float.f3{right:-1%}.float.f4{right:0}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(prefers-reduced-motion:reduce){.float{animation:none}}
 
-/* ---- section heads ---- */
-section{padding:4.2rem 0}
-.shead{text-align:center;max-width:640px;margin:0 auto 2.5rem}
-.shead .eye{color:var(--leaf-2);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:.8rem}
-.shead h2{font-family:'Tiro Devanagari Marathi',serif;font-size:clamp(2rem,5vw,2.8rem);color:var(--ink);margin:.3rem 0 .4rem;line-height:1.1}
-.shead p{color:var(--muted)}
-body.lang-en .shead h2{font-family:'Fraunces',serif}
+/* wave divider */
+.wave{display:block;width:100%;height:70px}
+.wave path{fill:var(--white)}
 
-/* ---- categories ---- */
-.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
-@media(max-width:900px){.cats{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:460px){.cats{grid-template-columns:1fr}}
-.cat{position:relative;background:#fff;border:1px solid rgba(46,125,50,.1);border-radius:18px;padding:1.5rem 1.2rem;transition:transform .2s,box-shadow .2s,border-color .2s;overflow:hidden}
-.cat::after{content:"";position:absolute;inset:auto -30% -40% auto;width:120px;height:120px;border-radius:50%;background:var(--milk-2);opacity:.7;transition:transform .3s}
-.cat:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(76,175,80,.4)}
-.cat:hover::after{transform:scale(1.4)}
-.cat .ic{width:54px;height:54px;border-radius:50%;background:var(--milk-2);display:grid;place-items:center;position:relative;z-index:2}
-.cat h3{font-family:'Tiro Devanagari Marathi',serif;font-size:1.3rem;color:var(--green-dk);margin:.6rem 0 .15rem;position:relative;z-index:2}
-.cat .en{font-size:.85rem;color:var(--muted);position:relative;z-index:2}
-body.lang-en .cat h3{font-family:'Fraunces',serif}
-.cats-cta{text-align:center;margin-top:2.4rem}
+/* ---------- promise ribbon ---------- */
+.promise{background:var(--white);padding:1rem 0 3.6rem}
+.promise-band{background:linear-gradient(120deg,var(--green-dk),var(--green-bright));border-radius:var(--r);padding:2rem 2.2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.promise-band::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.06);top:-140px;right:-60px}
+@media(max-width:760px){.promise-band{grid-template-columns:1fr;gap:1.2rem;padding:1.7rem}}
+.pr{display:flex;gap:.9rem;align-items:flex-start;color:#fff;position:relative;z-index:2}
+.pr .ic{flex:0 0 auto;width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.14);display:grid;place-items:center}
+.pr .ic svg{width:24px;height:24px;stroke:var(--butter);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pr h4{font-family:'Baloo 2',cursive;font-weight:600;font-size:1.1rem;margin-bottom:.1rem}
+.pr p{font-size:.86rem;opacity:.82;line-height:1.4}
 
-/* ---- how ordering works ---- */
-.ordering{background:linear-gradient(180deg,#fff,var(--milk))}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
-@media(max-width:760px){.steps{grid-template-columns:1fr}}
-.step{position:relative;background:#fff;border:1px solid rgba(46,125,50,.1);border-radius:18px;padding:1.7rem 1.4rem;text-align:center;box-shadow:0 12px 34px -22px rgba(20,70,25,.5)}
-.step .num{position:absolute;top:.7rem;right:1.1rem;font-family:'Fraunces',serif;font-weight:600;font-size:2.1rem;color:var(--milk-2);line-height:1}
-.step .ic{width:58px;height:58px;margin:0 auto .7rem;border-radius:50%;background:var(--milk-2);display:grid;place-items:center}
-.step h3{font-family:'Tiro Devanagari Marathi',serif;color:var(--green-dk);font-size:1.25rem;margin-bottom:.35rem}
-body.lang-en .step h3{font-family:'Fraunces',serif}
-.step p{font-size:.9rem;color:var(--muted)}
-.svc-note{max-width:720px;margin:2rem auto 0;text-align:center;background:var(--milk-2);border:1px solid rgba(76,175,80,.35);border-radius:16px;padding:1.1rem 1.4rem;font-weight:600;color:var(--ink)}
-.svc-note .em{color:var(--green-dk)}
+/* ---------- section basics ---------- */
+section{padding:4.4rem 0}
+.head{max-width:640px;margin-bottom:2.4rem}
+.head.center{margin-inline:auto;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:.45rem;color:var(--green);font-family:'Baloo 2',cursive;font-weight:600;font-size:.82rem;letter-spacing:2px;text-transform:uppercase}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--butter);border-radius:2px}
+.head.center .eyebrow::before{display:none}
+.head h2{font-size:clamp(2rem,4.8vw,3rem);color:var(--green-deep);margin:.5rem 0 .5rem}
+.head p{color:var(--muted);font-size:1.05rem}
 
-/* ---- story ---- */
-.story{background:linear-gradient(180deg,var(--milk),#fff)}
-.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
-@media(max-width:820px){.story-grid{grid-template-columns:1fr;gap:2rem}}
-.story-card{background:var(--fresh);color:#fff;border-radius:var(--radius);padding:2.5rem;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.story-card .big{font-family:'Tiro Devanagari Marathi',serif;font-size:2.4rem;line-height:1.2}
-.story-card .quote{font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;margin-top:1rem;opacity:.95}
-.story-card .owner{margin-top:1.6rem;font-weight:600;letter-spacing:.5px}
-.story-card .owner span{display:block;font-size:.82rem;opacity:.85;font-weight:400}
-.story-text h2{font-family:'Tiro Devanagari Marathi',serif;font-size:clamp(1.8rem,4.5vw,2.6rem);color:var(--ink);line-height:1.15;margin-bottom:1rem}
-body.lang-en .story-text h2,body.lang-en .story-card .big{font-family:'Fraunces',serif}
-.story-text p{color:var(--muted);margin-bottom:1rem}
-.story-text .em{color:var(--green-dk);font-weight:600}
+/* ---------- products bento ---------- */
+.products{background:var(--white)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:1rem}
+@media(max-width:900px){.bento{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.bento{grid-template-columns:1fr;grid-auto-rows:130px}}
+.tile{position:relative;border-radius:22px;padding:1.3rem;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transition:transform .2s,box-shadow .2s;border:1.5px solid rgba(14,86,55,.06)}
+.tile:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.tile .ti{width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.7);display:grid;place-items:center}
+.tile .ti svg{width:26px;height:26px;stroke:var(--green-dk);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.tile h3{font-family:'Baloo 2',cursive;font-weight:700;font-size:1.3rem;color:var(--green-deep);line-height:1.1}
+.tile .en{font-size:.8rem;color:var(--muted);font-weight:500}
+.tile .go{position:absolute;top:1.2rem;right:1.2rem;width:30px;height:30px;border-radius:50%;background:#fff;display:grid;place-items:center;opacity:0;transform:translateX(-4px);transition:.2s}
+.tile:hover .go{opacity:1;transform:none}
+.tile .go svg{width:16px;height:16px;stroke:var(--green-dk);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.tile.big{grid-column:span 2;grid-row:span 2}
+.tile.wide{grid-column:span 2}
+@media(max-width:480px){.tile.big,.tile.wide{grid-column:span 1}.tile.big{grid-row:span 2}}
+.t-mint{background:var(--mint)} .t-cream{background:var(--cream)} .t-sky{background:var(--sky)} .t-blush{background:var(--blush)}
+.tile.big h3{font-size:1.9rem}
+.tile.big .art{position:absolute;right:-10px;bottom:-10px;width:150px;opacity:.9}
+.bento-cta{text-align:center;margin-top:2.4rem}
 
-/* ---- info / hours / location ---- */
-.info{background:#14261A;color:#fff}
-.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
-@media(max-width:820px){.info-grid{grid-template-columns:1fr}}
-.info-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:2rem}
-.info-box h3{font-family:'Tiro Devanagari Marathi',serif;color:#8BD98F;font-size:1.6rem;margin-bottom:.3rem}
-body.lang-en .info-box h3{font-family:'Fraunces',serif}
-.info-box .sub{font-size:.85rem;opacity:.7;margin-bottom:1.2rem;text-transform:uppercase;letter-spacing:2px}
-.hours-row{display:flex;justify-content:space-between;align-items:center;padding:.7rem 0;border-bottom:1px dashed rgba(255,255,255,.15)}
-.hours-row:last-child{border:none}
-.hours-row .t{font-weight:600}
-.hours-row .closed{color:#ffcc80;font-size:.85rem}
-.note{margin-top:1rem;font-size:.85rem;opacity:.7}
-.addr{line-height:1.9;opacity:.92}
-.addr a{color:#fff;font-weight:600}
-.info-box .btn{margin-top:1.3rem}
+/* ---------- owner ---------- */
+.owner-sec{background:linear-gradient(180deg,var(--milk),var(--mint))}
+.owner-grid{display:grid;grid-template-columns:340px 1fr;gap:2.6rem;align-items:center}
+@media(max-width:820px){.owner-grid{grid-template-columns:1fr;gap:1.8rem;justify-items:center;text-align:center}}
+.owner-card{position:relative;background:#fff;border-radius:var(--r);padding:2.2rem;text-align:center;box-shadow:var(--shadow);width:100%;max-width:340px}
+.owner-card .ava{width:120px;height:120px;margin:0 auto .9rem;border-radius:50%;background:linear-gradient(135deg,var(--green-bright),var(--green-dk));display:grid;place-items:center;font-family:'Baloo 2',cursive;font-weight:800;font-size:2.6rem;color:#fff;box-shadow:0 14px 30px -12px rgba(14,86,55,.6)}
+.owner-card .badge-mini{position:absolute;top:1.4rem;right:1.4rem;width:44px;height:44px}
+.owner-card .role{color:var(--green);font-weight:600;font-family:'Baloo 2',cursive;letter-spacing:1px;text-transform:uppercase;font-size:.78rem}
+.owner-card .nm{font-family:'Baloo 2',cursive;font-weight:700;font-size:1.7rem;color:var(--green-deep);line-height:1.05;margin-top:.15rem}
+.owner-card .nm-en{color:var(--muted);font-size:.9rem}
+.owner-card .est{margin-top:1rem;display:inline-block;background:var(--cream);color:var(--green-dk);font-weight:600;font-size:.82rem;padding:.35rem .9rem;border-radius:999px}
+.owner-text h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--green-deep);margin-bottom:1rem}
+.owner-text p{color:var(--ink);opacity:.85;margin-bottom:1rem;font-size:1.05rem}
+.owner-text .quote{font-family:'Baloo 2',cursive;font-weight:600;font-size:1.4rem;color:var(--green);line-height:1.3;border-left:4px solid var(--butter);padding-left:1rem;margin:1.4rem 0}
+@media(max-width:820px){.owner-text .quote{border-left:none;border-top:4px solid var(--butter);padding:1rem 0 0}}
 
-/* ---- contact CTA ---- */
-.contact{background:var(--fresh);color:#fff;text-align:center}
-.contact h2{font-family:'Tiro Devanagari Marathi',serif;font-size:clamp(2rem,5vw,3rem);margin-bottom:.4rem}
-body.lang-en .contact h2{font-family:'Fraunces',serif}
-.contact p{opacity:.95;max-width:520px;margin:0 auto 1.8rem}
-.contact .hero-cta{margin-top:0}
+/* ---------- steps ---------- */
+.order-sec{background:var(--green-deep);color:#fff;position:relative;overflow:hidden}
+.order-sec .eyebrow{color:var(--butter)}
+.order-sec .head h2{color:#fff}
+.order-sec .head p{color:rgba(255,255,255,.75)}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;position:relative}
+@media(max-width:760px){.timeline{grid-template-columns:1fr}}
+.tstep{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:1.7rem 1.5rem;position:relative}
+.tstep .n{width:42px;height:42px;border-radius:50%;background:var(--butter);color:var(--green-deep);font-family:'Baloo 2',cursive;font-weight:800;font-size:1.2rem;display:grid;place-items:center;margin-bottom:.9rem}
+.tstep h4{font-family:'Baloo 2',cursive;font-weight:600;font-size:1.25rem;margin-bottom:.35rem}
+.tstep p{color:rgba(255,255,255,.75);font-size:.92rem}
+.order-note{text-align:center;margin-top:2rem;color:rgba(255,255,255,.85);font-size:.95rem}
+.order-note b{color:var(--butter)}
 
-/* ---- footer ---- */
-footer{background:#0f1c12;color:rgba(255,255,255,.7);padding:2.6rem 0;text-align:center;font-size:.9rem}
-footer .fbrand{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:.7rem;color:#fff}
-footer .fbrand img{width:38px;height:38px}
-footer .fbrand b{font-size:1.1rem}
-footer a{color:#8BD98F}
-footer .fine{margin-top:.8rem;font-size:.78rem;opacity:.5}
-footer .credit{margin-top:1.1rem;font-size:1rem;color:rgba(255,255,255,.8)}
-footer .credit a{color:#7FB2FF;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px}
+/* ---------- visit ---------- */
+.visit{background:var(--white)}
+.visit-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:2rem;align-items:stretch}
+@media(max-width:820px){.visit-grid{grid-template-columns:1fr}}
+.info-card{background:var(--milk);border:1.5px solid rgba(14,86,55,.08);border-radius:var(--r);padding:2rem;display:flex;flex-direction:column;gap:1.3rem}
+.iline{display:flex;gap:.9rem;align-items:flex-start}
+.iline .ic{flex:0 0 auto;width:46px;height:46px;border-radius:14px;background:var(--mint);display:grid;place-items:center}
+.iline .ic svg{width:23px;height:23px;stroke:var(--green-dk);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.iline h4{font-family:'Baloo 2',cursive;font-weight:600;font-size:1.05rem;color:var(--green-deep)}
+.iline p{color:var(--muted);font-size:.95rem;line-height:1.5}
+.iline a{color:var(--green);font-weight:600}
+.hours{display:flex;flex-direction:column;gap:.3rem;font-size:.92rem}
+.hours .hr{display:flex;justify-content:space-between;border-bottom:1px dashed rgba(14,86,55,.15);padding:.3rem 0}
+.hours .hr .cl{color:var(--butter-dk)}
+.info-card .btn{margin-top:.3rem;align-self:flex-start}
+.map-card{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);min-height:340px;border:6px solid #fff}
+.map-card iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:saturate(1.05)}
+
+/* ---------- final cta ---------- */
+.final{background:linear-gradient(120deg,var(--butter),var(--butter-dk));color:var(--green-deep);text-align:center}
+.final h2{font-size:clamp(2rem,5vw,3rem);color:var(--green-deep)}
+.final p{max-width:520px;margin:.6rem auto 1.7rem;font-weight:500;color:#3a3416}
+.final .hero-cta{justify-content:center}
+
+/* ---------- footer ---------- */
+footer{background:var(--green-deep);color:rgba(255,255,255,.72);padding:3rem 0 2rem;text-align:center}
+footer .fbrand{display:flex;align-items:center;justify-content:center;gap:.7rem;margin-bottom:.7rem;color:#fff}
+footer .fbrand img{width:46px;height:46px}
+footer .fbrand b{font-family:'Baloo 2',cursive;font-weight:700;font-size:1.3rem}
+footer .fmeta{font-size:.92rem;line-height:1.7}
+footer a{color:var(--butter)}
+footer .fine{margin-top:.9rem;font-size:.78rem;opacity:.5}
+footer .credit{margin-top:1.1rem;font-size:1rem;color:rgba(255,255,255,.85)}
+footer .credit a{color:#8FD0FF;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px}
 footer .credit a::after{content:" ↗";text-decoration:none}
 </style>
 </head>
@@ -166,150 +209,211 @@ footer .credit a::after{content:" ↗";text-decoration:none}
   <nav class="wrap nav">
     <a class="brand" href="#top">
       <img src="assets/logo.svg" alt="Ram Dudh Dairy logo">
-      <span style="line-height:1.1">
-        <b class="mr" data-mr="राम दूध डेअरी" data-en="Ram Dudh Dairy">राम दूध डेअरी</b>
-        <span class="sub">Ram Dudh Dairy</span>
+      <span>
+        <b class="disp" data-mr="राम दूध डेअरी" data-en="Ram Dudh Dairy">राम दूध डेअरी</b>
+        <small>Ram Dudh Dairy</small>
       </span>
     </a>
     <div class="nav-links">
-      <a class="lnk" href="#categories" data-mr="उत्पादने" data-en="Products">उत्पादने</a>
-      <a class="lnk" href="#story" data-mr="आमच्याबद्दल" data-en="About">आमच्याबद्दल</a>
+      <a class="lnk" href="#products" data-mr="उत्पादने" data-en="Products">उत्पादने</a>
+      <a class="lnk" href="#owner" data-mr="मालक" data-en="Owner">मालक</a>
       <a class="lnk" href="#visit" data-mr="भेट द्या" data-en="Visit">भेट द्या</a>
-      <button class="lang-btn" onclick="rdToggleLang()">English</button>
-      <a class="btn btn-wa" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="lang-btn" onclick="rdToggleLang()">ENG</button>
+      <a class="btn btn-green" href="tel:+91XXXXXXXXXX" data-mr="फोन करा" data-en="Call">फोन करा</a>
     </div>
   </nav>
 </header>
 
 <a id="top"></a>
 <section class="hero">
-  <div class="wrap inner">
-    <div class="badge"><img src="assets/logo.svg" alt="Ram Dudh Dairy emblem"></div>
-    <p class="kicker">Sai Nagar · Amravati</p>
-    <h1 class="mr" data-mr="राम दूध डेअरी" data-en="Ram Dudh Dairy">राम दूध डेअरी</h1>
-    <div class="en">Ram Dudh Dairy</div>
-    <div class="tagline mr" data-mr="शुद्धतेची हमी<span class='small serif'>A promise of purity</span>" data-en="A promise of purity<span class='small serif'>शुद्धतेची हमी</span>">शुद्धतेची हमी<span class="small serif">A promise of purity</span></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="chip"><span class="dot"></span><span data-mr="साई नगर, अमरावती · घरगुती डेअरी" data-en="Sai Nagar, Amravati · Home Dairy">साई नगर, अमरावती · घरगुती डेअरी</span></span>
+      <h1 class="disp" data-mr="रोज सकाळी <span class='hl'>ताजं व शुद्ध</span> दूध" data-en="<span class='hl'>Fresh &amp; pure</span> milk, every morning">रोज सकाळी <span class="hl">ताजं व शुद्ध</span> दूध</h1>
+      <p class="lead" data-mr="थेट गोठ्यातून तुमच्या घरापर्यंत — दूध, दही, तूप, पनीर, खवा व मिठाई. कोणतीही भेसळ नाही." data-en="Straight from the cowshed to your home — milk, curd, ghee, paneer, khava &amp; sweets. No adulteration, ever.">थेट गोठ्यातून तुमच्या घरापर्यंत — दूध, दही, तूप, पनीर, खवा व मिठाई. कोणतीही भेसळ नाही.</p>
+      <div class="hero-cta">
+        <a class="btn btn-butter" href="#products" data-mr="उत्पादने पाहा" data-en="See our products">उत्पादने पाहा</a>
+        <a class="btn btn-line" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" data-mr="WhatsApp वर ऑर्डर" data-en="Order on WhatsApp">WhatsApp वर ऑर्डर</a>
+      </div>
+      <div class="trust">
+        <span class="stars" aria-label="5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .8-5.2 4.7 1.5 6.9L12 17.8 5.7 20.9l1.5-6.9L2 9.3l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .8-5.2 4.7 1.5 6.9L12 17.8 5.7 20.9l1.5-6.9L2 9.3l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .8-5.2 4.7 1.5 6.9L12 17.8 5.7 20.9l1.5-6.9L2 9.3l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .8-5.2 4.7 1.5 6.9L12 17.8 5.7 20.9l1.5-6.9L2 9.3l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .8-5.2 4.7 1.5 6.9L12 17.8 5.7 20.9l1.5-6.9L2 9.3l7-.8z"/></svg>
+        </span>
+        <span class="txt" data-mr="<b>परिसराचा विश्वास</b> — साई नगरची आवडती डेअरी" data-en="<b>Trusted locally</b> — Sai Nagar's favourite dairy"><b>परिसराचा विश्वास</b> — साई नगरची आवडती डेअरी</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="art-disc">
+        <img class="art-emblem" src="assets/logo.svg" alt="Ram Dudh Dairy cow emblem">
+        <div class="float f1"><svg viewBox="0 0 24 24" fill="none" stroke="#16794C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M8 6h8l-1 3v11a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1V9z"/><path d="M9 13h6"/></svg><span data-mr="ताजं दूध" data-en="Fresh Milk">ताजं दूध</span></div>
+        <div class="float f2"><svg viewBox="0 0 24 24" fill="none" stroke="#16794C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l8-4 8 4-8 4z"/><path d="M4 9v6l8 4 8-4V9"/></svg><span data-mr="पनीर" data-en="Paneer">पनीर</span></div>
+        <div class="float f3"><svg viewBox="0 0 24 24" fill="none" stroke="#16794C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8h8v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2z"/><path d="M9 8V5h6v3"/></svg><span data-mr="साजूक तूप" data-en="Pure Ghee">साजूक तूप</span></div>
+        <div class="float f4"><svg viewBox="0 0 24 24" fill="none" stroke="#0B3D28" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4 5 6.5 5 9.5A5 5 0 0 1 7 12.5C7 9.5 9 7 12 3z"/></svg><span data-mr="१००% शुद्ध" data-en="100% Pure">१००% शुद्ध</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 240 80 480 0 720 24 C 960 48 1200 84 1440 44 L1440 70 L0 70 Z"></path></svg>
+
+<section class="promise">
+  <div class="wrap">
+    <div class="promise-band">
+      <div class="pr">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 13c0-3 2-5 5-5 1-2 3-3 5-3 3 0 5 2 5 5 1 .3 2 1.5 2 3a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"/><path d="M8 20h8"/></svg></div>
+        <div><h4 class="disp" data-mr="थेट गोठ्यातून" data-en="Straight from the cowshed">थेट गोठ्यातून</h4><p data-mr="स्वतःच्या गाई-म्हशींचं दूध — मधल्या हातांशिवाय." data-en="Milk from our own cows &amp; buffaloes — no middlemen.">स्वतःच्या गाई-म्हशींचं दूध — मधल्या हातांशिवाय.</p></div>
+      </div>
+      <div class="pr">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <div><h4 class="disp" data-mr="रोज सकाळी ताजं" data-en="Fresh each morning">रोज सकाळी ताजं</h4><p data-mr="दररोज ताजं काढलेलं व बनवलेलं — साठवलेलं नाही." data-en="Collected &amp; made fresh daily — never stored.">दररोज ताजं काढलेलं व बनवलेलं — साठवलेलं नाही.</p></div>
+      </div>
+      <div class="pr">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.6-3 7.7-7 9-4-1.3-7-4.4-7-9V6z"/><path d="M9 12l2 2 4-4.5"/></svg></div>
+        <div><h4 class="disp" data-mr="१००% शुद्ध" data-en="100% pure">१००% शुद्ध</h4><p data-mr="पाणी नाही, भेसळ नाही — फक्त शुद्ध दूध." data-en="No water, no adulteration — just pure milk.">पाणी नाही, भेसळ नाही — फक्त शुद्ध दूध.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="products">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" data-mr="आमची उत्पादने" data-en="Our products">आमची उत्पादने</span>
+      <h2 class="disp" data-mr="ताज्या दुधाचं संपूर्ण घर" data-en="A whole world of fresh milk">ताज्या दुधाचं संपूर्ण घर</h2>
+      <p data-mr="रोजच्या दुधापासून सणासुदीच्या मिठाईपर्यंत — सगळं इथंच, ताजं व शुद्ध." data-en="From your daily milk to festival sweets — all here, fresh and pure.">रोजच्या दुधापासून सणासुदीच्या मिठाईपर्यंत — सगळं इथंच, ताजं व शुद्ध.</p>
+    </div>
+    <div class="bento">
+      <a class="tile big t-mint" href="products.html#milk">
+        <div class="ti"><svg viewBox="0 0 24 24"><path d="M9 2h6M8 6h8l-1 3v11a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1V9z"/><path d="M9 13h6"/></svg></div>
+        <div><h3 class="disp" data-mr="ताजं दूध" data-en="Fresh Milk">ताजं दूध</h3><div class="en" data-mr="गाईचं व म्हशीचं · रोज सकाळी" data-en="Cow &amp; buffalo · every morning">गाईचं व म्हशीचं · रोज सकाळी</div></div>
+        <span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <svg class="art" viewBox="0 0 24 24" fill="none" stroke="#16794C" stroke-width="1.1" opacity="0.35" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M8 6h8l-1 3v11a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1V9z"/><path d="M9 13h6"/></svg>
+      </a>
+      <a class="tile t-cream" href="products.html#dahi">
+        <div class="ti"><svg viewBox="0 0 24 24"><path d="M4 9h16l-1.2 9.5a2 2 0 0 1-2 1.5H7.2a2 2 0 0 1-2-1.5z"/><path d="M4 9c0-2 3.6-3.5 8-3.5S20 7 20 9"/></svg></div>
+        <div><h3 class="disp" data-mr="दही" data-en="Curd">दही</h3><div class="en">Curd (Dahi)</div></div>
+        <span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="tile t-sky" href="products.html#taak">
+        <div class="ti"><svg viewBox="0 0 24 24"><path d="M7 8h10l-1 12a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z"/><path d="M7 8l1.5-3h7L17 8"/></svg></div>
+        <div><h3 class="disp" data-mr="ताक व लस्सी" data-en="Buttermilk">ताक व लस्सी</h3><div class="en">Buttermilk &amp; Lassi</div></div>
+        <span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="tile wide t-blush" href="products.html#paneer">
+        <div class="ti"><svg viewBox="0 0 24 24"><path d="M4 9l8-4 8 4-8 4z"/><path d="M4 9v6l8 4 8-4V9"/><path d="M12 13v6"/></svg></div>
+        <div><h3 class="disp" data-mr="ताजं पनीर" data-en="Fresh Paneer">ताजं पनीर</h3><div class="en" data-mr="मऊ, मलईदार · रोज ताजं" data-en="Soft, creamy · made fresh">मऊ, मलईदार · रोज ताजं</div></div>
+        <span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="tile t-mint" href="products.html#ghee">
+        <div class="ti"><svg viewBox="0 0 24 24"><path d="M8 8h8v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2z"/><path d="M9 8V5h6v3"/><path d="M10.5 4h3"/></svg></div>
+        <div><h3 class="disp" data-mr="तूप व लोणी" data-en="Ghee &amp; Butter">तूप व लोणी</h3><div class="en">Ghee &amp; Butter</div></div>
+        <span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="tile t-cream" href="products.html#khava">
+        <div class="ti"><svg viewBox="0 0 24 24"><circle cx="9" cy="13" r="4"/><circle cx="16" cy="11" r="3.5"/><path d="M5 17h14"/></svg></div>
+        <div><h3 class="disp" data-mr="खवा / मावा" data-en="Khava / Mawa">खवा / मावा</h3><div class="en">Khava / Mawa</div></div>
+        <span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="tile wide t-sky" href="products.html#shrikhand">
+        <div class="ti"><svg viewBox="0 0 24 24"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M8 8c0-1.2 1-1.6 1-2.8M12 8c0-1.2 1-1.6 1-2.8M16 8c0-1.2 1-1.6 1-2.8"/></svg></div>
+        <div><h3 class="disp" data-mr="श्रीखंड व बासुंदी" data-en="Shrikhand &amp; Basundi">श्रीखंड व बासुंदी</h3><div class="en" data-mr="केशर · आम्रखंड · बासुंदी" data-en="Kesar · Amrakhand · Basundi">केशर · आम्रखंड · बासुंदी</div></div>
+        <span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="tile wide t-blush" href="products.html#pedha">
+        <div class="ti"><svg viewBox="0 0 24 24"><circle cx="8" cy="10" r="3"/><circle cx="15" cy="9" r="3"/><circle cx="12" cy="15" r="3"/></svg></div>
+        <div><h3 class="disp" data-mr="पेढा व मिठाई" data-en="Pedha &amp; Sweets">पेढा व मिठाई</h3><div class="en" data-mr="दुधाचा पेढा · बर्फी · गुलाबजाम" data-en="Milk pedha · barfi · gulab jamun">दुधाचा पेढा · बर्फी · गुलाबजाम</div></div>
+        <span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+    <div class="bento-cta">
+      <a class="btn btn-green" href="products.html" data-mr="संपूर्ण यादी व किंमती पाहा →" data-en="See full menu &amp; order →">संपूर्ण यादी व किंमती पाहा →</a>
+    </div>
+  </div>
+</section>
+
+<section id="owner" class="owner-sec">
+  <div class="wrap owner-grid">
+    <div class="owner-card">
+      <img class="badge-mini" src="assets/logo.svg" alt="">
+      <div class="ava">रा</div>
+      <div class="role" data-mr="मालक" data-en="Proprietor">मालक</div>
+      <div class="nm disp" data-mr="राम बुरघाटे" data-en="Ram Burghate">राम बुरघाटे</div>
+      <div class="nm-en">Ram Burghate</div>
+      <span class="est" data-mr="साई नगर, अमरावती" data-en="Sai Nagar, Amravati">साई नगर, अमरावती</span>
+    </div>
+    <div class="owner-text">
+      <span class="eyebrow" data-mr="मालकाचं मनोगत" data-en="From the owner">मालकाचं मनोगत</span>
+      <h2 class="disp" data-mr="एका कुटुंबाची, शुद्धतेची डेअरी" data-en="A family dairy, built on purity">एका कुटुंबाची, शुद्धतेची डेअरी</h2>
+      <p data-mr="राम बुरघाटे यांची राम दूध डेअरी साई नगर, अमरावती इथं घराघरात रोजचं ताजं दूध पोहोचवते. इथलं प्रत्येक थेंब दूध हे स्वतःच्या घरात वापरावं इतकं शुद्ध असतं." data-en="Ram Burghate's Ram Dudh Dairy brings fresh milk to homes across Sai Nagar, Amravati every day. Every drop that leaves here is pure enough for our own family's table.">राम बुरघाटे यांची राम दूध डेअरी साई नगर, अमरावती इथं घराघरात रोजचं ताजं दूध पोहोचवते. इथलं प्रत्येक थेंब दूध हे स्वतःच्या घरात वापरावं इतकं शुद्ध असतं.</p>
+      <div class="quote" data-mr="“शुद्ध दूध हीच माझी ओळख — आणि तीच माझी हमी.”" data-en="“Pure milk is my name — and it is my promise.”">“शुद्ध दूध हीच माझी ओळख — आणि तीच माझी हमी.”</div>
+    </div>
+  </div>
+</section>
+
+<section id="order" class="order-sec">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow" data-mr="ऑर्डर कशी करायची" data-en="How to order">ऑर्डर कशी करायची</span>
+      <h2 class="disp" data-mr="तीन सोप्या पायऱ्या" data-en="Just three easy steps">तीन सोप्या पायऱ्या</h2>
+      <p data-mr="फोन उचला किंवा WhatsApp करा — बाकीचं आम्ही सांभाळतो." data-en="Pick up the phone or send a WhatsApp — we handle the rest.">फोन उचला किंवा WhatsApp करा — बाकीचं आम्ही सांभाळतो.</p>
+    </div>
+    <div class="timeline">
+      <div class="tstep"><div class="n">1</div><h4 class="disp" data-mr="यादी सांगा" data-en="Tell us your list">यादी सांगा</h4><p data-mr="फोन किंवा WhatsApp वर तुम्हाला काय हवं ते कळवा — दूध, दही, पनीर, खवा जे हवं ते." data-en="Call or WhatsApp us what you need — milk, curd, paneer, khava, anything.">फोन किंवा WhatsApp वर तुम्हाला काय हवं ते कळवा — दूध, दही, पनीर, खवा जे हवं ते.</p></div>
+      <div class="tstep"><div class="n">2</div><h4 class="disp" data-mr="ताजं तयार" data-en="Made fresh">ताजं तयार</h4><p data-mr="तुमची ऑर्डर आम्ही ताजी काढून/बनवून तयार ठेवतो — शुद्ध व स्वच्छ." data-en="We prepare your order fresh and keep it ready — pure and clean.">तुमची ऑर्डर आम्ही ताजी काढून/बनवून तयार ठेवतो — शुद्ध व स्वच्छ.</p></div>
+      <div class="tstep"><div class="n">3</div><h4 class="disp" data-mr="घ्या किंवा मागवा" data-en="Collect or delivery">घ्या किंवा मागवा</h4><p data-mr="डेअरीतून घेऊन जा किंवा घरपोच दुधाच्या सेवेबद्दल विचारा." data-en="Collect from the dairy, or ask about our home milk delivery.">डेअरीतून घेऊन जा किंवा घरपोच दुधाच्या सेवेबद्दल विचारा.</p></div>
+    </div>
+    <p class="order-note" data-mr="सण-समारंभासाठी <b>आगाऊ ऑर्डर</b> घेतल्या जातात — खवा, पेढा, श्रीखंड व बासुंदी." data-en="<b>Advance orders</b> taken for festivals &amp; functions — khava, pedha, shrikhand &amp; basundi.">सण-समारंभासाठी <b>आगाऊ ऑर्डर</b> घेतल्या जातात — खवा, पेढा, श्रीखंड व बासुंदी.</p>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" data-mr="भेट द्या" data-en="Visit us">भेट द्या</span>
+      <h2 class="disp" data-mr="साई नगरमध्ये आम्हाला भेटा" data-en="Find us in Sai Nagar">साई नगरमध्ये आम्हाला भेटा</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="info-card">
+        <div class="iline">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div><h4 class="disp" data-mr="पत्ता" data-en="Address">पत्ता</h4><p class="mr" data-mr="राम दूध डेअरी, जैन मंदिराजवळ,<br>साई नगर, अमरावती, महाराष्ट्र" data-en="Ram Dudh Dairy, Near Jain Mandir,<br>Sai Nagar, Amravati, Maharashtra">राम दूध डेअरी, जैन मंदिराजवळ,<br>साई नगर, अमरावती, महाराष्ट्र</p></div>
+        </div>
+        <div class="iline">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"/></svg></div>
+          <div><h4 class="disp" data-mr="फोन व WhatsApp" data-en="Phone &amp; WhatsApp">फोन व WhatsApp</h4><p><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p></div>
+        </div>
+        <div class="iline">
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div><h4 class="disp" data-mr="वेळ" data-en="Hours">वेळ</h4>
+            <div class="hours">
+              <!-- TODO: confirm real timings with Ram Burghate -->
+              <div class="hr"><span data-mr="सकाळ" data-en="Morning">सकाळ</span><span>6:30 — 11:00</span></div>
+              <div class="hr"><span data-mr="दुपार" data-en="Afternoon">दुपार</span><span class="cl" data-mr="बंद" data-en="Closed">बंद</span></div>
+              <div class="hr"><span data-mr="संध्याकाळ" data-en="Evening">संध्याकाळ</span><span>5:00 — 9:00</span></div>
+              <div class="hr"><span data-mr="आठवडा" data-en="Week">आठवडा</span><span data-mr="रोज सुरू" data-en="Open daily">रोज सुरू</span></div>
+            </div>
+          </div>
+        </div>
+        <a class="btn btn-wa" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" data-mr="WhatsApp करा" data-en="Message on WhatsApp">WhatsApp करा</a>
+      </div>
+      <div class="map-card">
+        <iframe title="Ram Dudh Dairy location" src="https://maps.google.com/maps?q=Sai%20Nagar%20Amravati%20Jain%20Mandir&z=15&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="disp" data-mr="आजचं ताजं दूध बुक करा" data-en="Book today's fresh milk">आजचं ताजं दूध बुक करा</h2>
+    <p data-mr="एक फोन किंवा एक मेसेज — शुद्ध, ताजं दूध तयार ठेवू." data-en="One call or one message — we'll keep pure, fresh milk ready for you.">एक फोन किंवा एक मेसेज — शुद्ध, ताजं दूध तयार ठेवू.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#categories" data-mr="आमची उत्पादने पाहा" data-en="Browse our products">आमची उत्पादने पाहा</a>
-      <a class="btn btn-wa" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" data-mr="WhatsApp वर ऑर्डर" data-en="Order on WhatsApp">WhatsApp वर ऑर्डर</a>
-      <a class="btn btn-ghost" href="#visit" data-mr="डेअरीचा पत्ता" data-en="Find the dairy">डेअरीचा पत्ता</a>
-    </div>
-    <p class="estd" data-mr="रोज ताजं · रोज शुद्ध" data-en="Fresh every day · Pure every day">रोज ताजं · रोज शुद्ध</p>
-  </div>
-</section>
-
-<div class="wrap pillars">
-  <div class="grid">
-    <div class="pill"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 5 6.5 5 9.5A5 5 0 0 1 7 12.5C7 9.5 9 7 12 3z"/><path d="M9.5 12.5l2 2 3.5-3.8"/></svg></div><h3 class="mr" data-mr="शुद्धता" data-en="Purity">शुद्धता</h3><p data-mr="100% शुद्ध दूध — कोणतीही भेसळ नाही." data-en="100% pure milk — no adulteration, ever.">100% शुद्ध दूध — कोणतीही भेसळ नाही.</p></div>
-    <div class="pill"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg></div><h3 class="mr" data-mr="रोज ताजं" data-en="Fresh Daily">रोज ताजं</h3><p data-mr="दररोज सकाळी ताजं काढलेलं व बनवलेलं." data-en="Collected and made fresh every single morning.">दररोज सकाळी ताजं काढलेलं व बनवलेलं.</p></div>
-    <div class="pill"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.6-3 7.7-7 9-4-1.3-7-4.4-7-9V6z"/><path d="M9 12l2 2 4-4.5"/></svg></div><h3 class="mr" data-mr="विश्वास" data-en="Trust">विश्वास</h3><p data-mr="परिसराचा विश्वास असलेली डेअरी." data-en="The dairy the neighbourhood trusts.">परिसराचा विश्वास असलेली डेअरी.</p></div>
-  </div>
-</div>
-
-<section id="categories">
-  <div class="wrap">
-    <div class="shead">
-      <p class="eye" data-mr="आमची उत्पादने · What we make" data-en="What we make">आमची उत्पादने · What we make</p>
-      <h2 class="mr" data-mr="शुद्ध व ताज्या दुधाचे सर्व पदार्थ" data-en="Everything from pure, fresh milk">शुद्ध व ताज्या दुधाचे सर्व पदार्थ</h2>
-      <p data-mr="ताज्या दुधापासून बनवलेले रोजचे व सणासुदीचे सर्व दुग्धजन्य पदार्थ — एकाच विश्वासू ठिकाणी." data-en="Fresh milk and everything made from it — daily staples and festive treats, all from one trusted dairy.">ताज्या दुधापासून बनवलेले रोजचे व सणासुदीचे सर्व दुग्धजन्य पदार्थ — एकाच विश्वासू ठिकाणी.</p>
-    </div>
-    <div class="cats">
-      <a class="cat" href="products.html#milk"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 2h6M8 6h8l-1 3v11a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1V9z"/><path d="M8.4 6l.6-4M15.6 6l-.6-4M9 13h6"/></svg></div><h3 class="mr" data-mr="ताजं दूध" data-en="Fresh Milk">ताजं दूध</h3><div class="en only-mr">Fresh Milk</div></a>
-      <a class="cat" href="products.html#dahi"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9h16l-1.2 9.5a2 2 0 0 1-2 1.5H7.2a2 2 0 0 1-2-1.5z"/><path d="M4 9c0-2 3.6-3.5 8-3.5S20 7 20 9"/><path d="M9 13.5l1.6 1.6L14 12"/></svg></div><h3 class="mr" data-mr="दही" data-en="Curd (Dahi)">दही</h3><div class="en only-mr">Curd (Dahi)</div></a>
-      <a class="cat" href="products.html#taak"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 8h10l-1 12a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z"/><path d="M7 8l1.5-3h7L17 8"/><path d="M13 2c1 1 1 2 0 3"/></svg></div><h3 class="mr" data-mr="ताक व लस्सी" data-en="Buttermilk & Lassi">ताक व लस्सी</h3><div class="en only-mr">Buttermilk & Lassi</div></a>
-      <a class="cat" href="products.html#paneer"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9l8-4 8 4-8 4z"/><path d="M4 9v6l8 4 8-4V9"/><path d="M12 13v6"/></svg></div><h3 class="mr" data-mr="पनीर" data-en="Paneer">पनीर</h3><div class="en only-mr">Paneer</div></a>
-      <a class="cat" href="products.html#ghee"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 8h8v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2z"/><path d="M9 8V5h6v3"/><path d="M10.5 4h3"/><path d="M11 13h2"/></svg></div><h3 class="mr" data-mr="तूप व लोणी" data-en="Ghee & Butter">तूप व लोणी</h3><div class="en only-mr">Ghee & Butter</div></a>
-      <a class="cat" href="products.html#khava"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="13" r="4"/><circle cx="16" cy="11" r="3.5"/><path d="M5 17h14"/></svg></div><h3 class="mr" data-mr="खवा / मावा" data-en="Khava / Mawa">खवा / मावा</h3><div class="en only-mr">Khava / Mawa</div></a>
-      <a class="cat" href="products.html#shrikhand"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M8 8c0-1.2 1-1.6 1-2.8M12 8c0-1.2 1-1.6 1-2.8M16 8c0-1.2 1-1.6 1-2.8"/></svg></div><h3 class="mr" data-mr="श्रीखंड व बासुंदी" data-en="Shrikhand & Basundi">श्रीखंड व बासुंदी</h3><div class="en only-mr">Shrikhand & Basundi</div></a>
-      <a class="cat" href="products.html#pedha"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="10" r="3"/><circle cx="15" cy="9" r="3"/><circle cx="12" cy="15" r="3"/></svg></div><h3 class="mr" data-mr="पेढा व मिठाई" data-en="Pedha & Sweets">पेढा व मिठाई</h3><div class="en only-mr">Pedha & Sweets</div></a>
-    </div>
-    <div class="cats-cta">
-      <a class="btn btn-solid" href="products.html" data-mr="संपूर्ण यादी पाहा · View full menu →" data-en="View full menu →">संपूर्ण यादी पाहा · View full menu →</a>
-    </div>
-  </div>
-</section>
-
-<section id="story" class="story">
-  <div class="wrap story-grid">
-    <div class="story-card">
-      <div class="big mr" data-mr="“दूध शुद्ध, तर सगळंच शुद्ध.”" data-en="“Pure milk means everything is pure.”">“दूध शुद्ध, तर सगळंच शुद्ध.”</div>
-      <div class="quote" data-mr="Every litre that leaves our dairy is milk we'd pour for our own children." data-en="Every litre that leaves our dairy is milk we'd pour for our own children.">Every litre that leaves our dairy is milk we'd pour for our own children.</div>
-      <!-- TODO: replace with the real proprietor's name once confirmed -->
-      <div class="owner" data-mr="राम दूध डेअरी परिवार<span>Proprietor · Ram Dudh Dairy</span>" data-en="Ram Dudh Dairy Family<span>Proprietor · राम दूध डेअरी</span>">राम दूध डेअरी परिवार<span>Proprietor · Ram Dudh Dairy</span></div>
-    </div>
-    <div class="story-text">
-      <h2 class="mr" data-mr="साई नगरची शुद्ध दुधाची डेअरी" data-en="Sai Nagar's pure-milk dairy">साई नगरची शुद्ध दुधाची डेअरी</h2>
-      <p data-mr="राम दूध डेअरी ही <span class='em'>साई नगर, अमरावती</span> येथील कुटुंबाने चालवलेली दुधाची डेअरी आहे. इथल्या घराघरात रोजचं ताजं दूध पोहोचवणं आणि सणासुदीला शुद्ध खवा, पेढा व श्रीखंड देणं — हेच आमचं काम." data-en="Ram Dudh Dairy is a <span class='em'>family-run dairy in Sai Nagar, Amravati</span>. Bringing fresh milk to homes here every day — and pure khava, pedha and shrikhand for every festival — is what we do best.">राम दूध डेअरी ही <span class="em">साई नगर, अमरावती</span> येथील कुटुंबाने चालवलेली दुधाची डेअरी आहे. इथल्या घराघरात रोजचं ताजं दूध पोहोचवणं आणि सणासुदीला शुद्ध खवा, पेढा व श्रीखंड देणं — हेच आमचं काम.</p>
-      <p data-mr="आम्ही <span class='em'>शुद्धतेशी कधीही तडजोड करत नाही</span> — दूध, दही, ताक, पनीर, तूप, खवा व मिठाई सगळं ताज्या दुधापासून, रोज ताजं. म्हणूनच परिसरातली कुटुंबं वर्षानुवर्षं आमच्यावर विश्वास ठेवतात." data-en="We <span class='em'>never compromise on purity</span> — milk, curd, buttermilk, paneer, ghee, khava and sweets, all from fresh milk, made fresh daily. That's why families here have trusted us for years.">आम्ही <span class="em">शुद्धतेशी कधीही तडजोड करत नाही</span> — दूध, दही, ताक, पनीर, तूप, खवा व मिठाई सगळं ताज्या दुधापासून, रोज ताजं. म्हणूनच परिसरातली कुटुंबं वर्षानुवर्षं आमच्यावर विश्वास ठेवतात.</p>
-      <p class="mr" style="color:var(--green-dk);font-weight:600;font-size:1.05rem" data-mr="शुद्धतेची हमी — आजही, उद्याही." data-en="A promise of purity — today and tomorrow.">शुद्धतेची हमी — आजही, उद्याही.</p>
-    </div>
-  </div>
-</section>
-
-<section id="visit" class="info">
-  <div class="wrap">
-    <div class="shead">
-      <p class="eye" style="color:#8BD98F" data-mr="भेट द्या · Visit us" data-en="Visit us">भेट द्या · Visit us</p>
-      <h2 class="mr" style="color:#fff" data-mr="डेअरीची वेळ व पत्ता" data-en="Hours & Address">डेअरीची वेळ व पत्ता</h2>
-    </div>
-    <div class="info-grid">
-      <div class="info-box">
-        <h3 class="mr" data-mr="डेअरीची वेळ" data-en="Opening Hours">डेअरीची वेळ</h3>
-        <p class="sub">Opening Hours</p>
-        <!-- TODO: confirm real timings with the uncle -->
-        <div class="hours-row"><span class="mr" data-mr="सकाळ · Morning" data-en="Morning">सकाळ · Morning</span><span class="t">6:30 — 11:00</span></div>
-        <div class="hours-row"><span class="mr" data-mr="दुपारची विश्रांती" data-en="Afternoon break">दुपारची विश्रांती</span><span class="closed" data-mr="11:00 — 5:00 बंद" data-en="11:00 — 5:00 closed">11:00 — 5:00 बंद</span></div>
-        <div class="hours-row"><span class="mr" data-mr="संध्याकाळ · Evening" data-en="Evening">संध्याकाळ · Evening</span><span class="t">5:00 — 9:00</span></div>
-        <p class="note" data-mr="दररोज सुरू · Open all week. (वेळ पुष्टीकरणासाठी — timings to be confirmed.)" data-en="Open all week. (Timings to be confirmed.)">दररोज सुरू · Open all week. (वेळ पुष्टीकरणासाठी — timings to be confirmed.)</p>
-      </div>
-      <div class="info-box">
-        <h3 class="mr" data-mr="पत्ता व संपर्क" data-en="Address & Contact">पत्ता व संपर्क</h3>
-        <p class="sub">Address & Contact</p>
-        <p class="addr mr" data-mr="राम दूध डेअरी<br>जैन मंदिराजवळ, साई नगर<br>अमरावती, महाराष्ट्र" data-en="Ram Dudh Dairy<br>Near Jain Mandir, Sai Nagar<br>Amravati, Maharashtra">राम दूध डेअरी<br>जैन मंदिराजवळ, साई नगर<br>अमरावती, महाराष्ट्र</p>
-        <!-- TODO: replace with the real phone number -->
-        <p class="addr" style="margin-top:.6rem"><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
-        <a class="btn btn-wa" href="https://maps.google.com/?q=Ram+Dudh+Dairy+Near+Jain+Mandir+Sai+Nagar+Amravati" target="_blank" rel="noopener" data-mr="Google Maps वर मार्ग" data-en="Directions on Google Maps">Google Maps वर मार्ग</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="ordering" class="ordering">
-  <div class="wrap">
-    <div class="shead">
-      <p class="eye" data-mr="अशी ऑर्डर करा · How ordering works" data-en="How ordering works">अशी ऑर्डर करा · How ordering works</p>
-      <h2 class="mr" data-mr="ऑर्डर करा · ताजं तयार · घेऊन जा" data-en="Order · Made fresh · Collect">ऑर्डर करा · ताजं तयार · घेऊन जा</h2>
-      <p data-mr="सोपी पद्धत — WhatsApp वर किंवा फोनवर यादी सांगा, आम्ही ताजं तयार ठेवतो, आणि तुम्ही डेअरीतून घेऊन जा." data-en="Simple — tell us your list on WhatsApp or phone, we keep it fresh and ready, and you collect it from the dairy.">सोपी पद्धत — WhatsApp वर किंवा फोनवर यादी सांगा, आम्ही ताजं तयार ठेवतो, आणि तुम्ही डेअरीतून घेऊन जा.</p>
-    </div>
-    <div class="steps">
-      <div class="step"><span class="num">1</span>
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 3v-3H4z"/><path d="M8 9h8M8 12h5"/></svg></div>
-        <h3 class="mr" data-mr="ऑर्डर सांगा" data-en="Tell us your order">ऑर्डर सांगा</h3>
-        <p data-mr="WhatsApp वर किंवा फोनवर तुम्हाला काय हवं ते कळवा — दूध, दही, पनीर, खवा जे हवं ते." data-en="Send us what you need on WhatsApp or by phone — milk, curd, paneer, khava, anything.">WhatsApp वर किंवा फोनवर तुम्हाला काय हवं ते कळवा — दूध, दही, पनीर, खवा जे हवं ते.</p>
-      </div>
-      <div class="step"><span class="num">2</span>
-        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg></div>
-        <h3 class="mr" data-mr="ताजं तयार करतो" data-en="Made fresh">ताजं तयार करतो</h3>
-        <p data-mr="तुमची ऑर्डर आम्ही ताजी काढून/बनवून तयार ठेवतो — शुद्ध व स्वच्छ." data-en="We prepare your order fresh and keep it ready — pure and clean.">तुमची ऑर्डर आम्ही ताजी काढून/बनवून तयार ठेवतो — शुद्ध व स्वच्छ.</p>
-      </div>
-      <div class="step"><span class="num">3</span>
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9l1-4h14l1 4"/><path d="M4 9a2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 5 0"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg></div>
-        <h3 class="mr" data-mr="घेऊन जा" data-en="Collect">घेऊन जा</h3>
-        <p data-mr="डेअरीतून सोयीने घेऊन जा. घरपोच सेवेबद्दल विचारा." data-en="Collect from the dairy at your convenience. Ask us about home delivery.">डेअरीतून सोयीने घेऊन जा. घरपोच सेवेबद्दल विचारा.</p>
-      </div>
-    </div>
-    <!-- TODO: confirm delivery model (doorstep milk round? area covered?) and update this note -->
-    <p class="svc-note" data-mr="घरपोच दूध सेवेबद्दल <span class='em'>डेअरीला विचारा</span> — तुमचा परिसर व वेळ कळवल्यास आम्ही सांगू." data-en="Ask the dairy about <span class='em'>home milk delivery</span> — tell us your area and timing and we'll let you know.">घरपोच दूध सेवेबद्दल <span class="em">डेअरीला विचारा</span> — तुमचा परिसर व वेळ कळवल्यास आम्ही सांगू.</p>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="wrap">
-    <h2 class="mr" data-mr="आजच ऑर्डर करा" data-en="Order today">आजच ऑर्डर करा</h2>
-    <p data-mr="तुमची यादी WhatsApp वर पाठवा किंवा फोन करा — आम्ही ताजं तयार ठेवू.<br>डेअरीतून घेऊन जा · घरपोच सेवेबद्दल विचारा." data-en="Send your list on WhatsApp or call — we'll keep it fresh and ready. Collect from the dairy · ask about home delivery.">तुमची यादी WhatsApp वर पाठवा किंवा फोन करा — आम्ही ताजं तयार ठेवू.<br>डेअरीतून घेऊन जा · घरपोच सेवेबद्दल विचारा.</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="tel:+91XXXXXXXXXX" data-mr="फोन करा" data-en="Call us">फोन करा</a>
-      <a class="btn btn-wa" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-green" href="tel:+91XXXXXXXXXX" data-mr="फोन करा" data-en="Call us">फोन करा</a>
+      <a class="btn btn-white" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
 </section>
@@ -318,11 +422,13 @@ footer .credit a::after{content:" ↗";text-decoration:none}
   <div class="wrap">
     <div class="fbrand">
       <img src="assets/logo.svg" alt="">
-      <b class="mr" data-mr="राम दूध डेअरी · Ram Dudh Dairy" data-en="Ram Dudh Dairy · राम दूध डेअरी">राम दूध डेअरी · Ram Dudh Dairy</b>
+      <b class="disp" data-mr="राम दूध डेअरी" data-en="Ram Dudh Dairy">राम दूध डेअरी</b>
     </div>
-    <p data-mr="जैन मंदिराजवळ, साई नगर, अमरावती, महाराष्ट्र" data-en="Near Jain Mandir, Sai Nagar, Amravati, Maharashtra">जैन मंदिराजवळ, साई नगर, अमरावती, महाराष्ट्र</p>
-    <p>+91 XXXXX XXXXX</p>
-    <p class="fine">© Ram Dudh Dairy. शुद्धतेची हमी.</p>
+    <p class="fmeta">
+      <span data-mr="जैन मंदिराजवळ, साई नगर, अमरावती, महाराष्ट्र" data-en="Near Jain Mandir, Sai Nagar, Amravati, Maharashtra">जैन मंदिराजवळ, साई नगर, अमरावती, महाराष्ट्र</span><br>
+      <span data-mr="मालक: राम बुरघाटे · +91 XXXXX XXXXX" data-en="Proprietor: Ram Burghate · +91 XXXXX XXXXX">मालक: राम बुरघाटे · +91 XXXXX XXXXX</span>
+    </p>
+    <p class="fine" data-mr="© राम दूध डेअरी · रोज ताजं, रोज शुद्ध." data-en="© Ram Dudh Dairy · Fresh daily, pure daily.">© राम दूध डेअरी · रोज ताजं, रोज शुद्ध.</p>
     <p class="credit">Designed by <a href="https://apeq591.github.io/mukta-card/" target="_blank" rel="noopener">Mukta Dhandge</a></p>
   </div>
 </footer>
